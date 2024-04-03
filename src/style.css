@@ -1,0 +1,1241 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url(./Assets/Inter-Regular.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyFontBolder';
+    src: url(./Assets/Inter-Bold.ttf) format('truetype');
+
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyFontMedium';
+    src: url(./Assets/Inter-Medium.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyFontSemiBold';
+    src: url(./Assets/Inter-SemiBold.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+
+:root {
+    --div-a-height: 0;
+    --div-b-height: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MyFont';
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    width: 100%;
+}
+
+.content {
+    display: grid;
+    align-items: center;
+    /*
+    background-color: #f2f2f2;
+    */
+    background-image: url(./Assets/colorful.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 30px;
+    width: 100%;
+}
+
+.all {
+    width: 100%;
+
+}
+
+/*
+.content::before {
+    position: absolute;
+    content: "";
+    background-image: url(./Assets/sun.svg);
+    height: 50rem;
+    width: 50rem;
+    right: 0;
+    top: 0;
+    opacity: 1;
+
+}
+*/
+
+.heading {
+    display: flex;
+    font-family: 'MyFontBolder';
+    align-items: center;
+    padding: 20px;
+    justify-items: start;
+    justify-content: start;
+    gap: 15px;
+    font-size: 2.2rem;
+    padding-bottom: 0;
+    padding-left: 2%;
+    font-family: 'MyFontBolder';
+
+}
+
+.second-line {
+    display: flex;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.315);
+    height: max-content;
+    width: 800px;
+    margin-left: 7%;
+    border-radius: 15px;
+    margin-top: 50px;
+    margin-bottom: 15px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+
+
+
+}
+
+.morning {
+    margin-left: 7%;
+    margin-top: 20px;
+    font-size: 70px;
+    font-weight: bolder;
+    position: relative;
+    font-family: 'MyFontSemiBold';
+}
+
+.daySection {
+    font-size: 7rem;
+}
+
+.dot {
+    color: #A92727;
+    margin-left: -15px;
+}
+
+.question {
+    margin-left: 7%;
+    margin-top: 20px;
+    color: rgba(0, 0, 0, .22);
+    font-weight: bolder;
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+    font-family: 'MyFontMedium';
+
+}
+
+.main {
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+    padding-left: 0;
+    margin-left: 7%;
+    margin-bottom: 5%;
+}
+
+.day,
+.month {
+    font-size: 2.5rem;
+    color: rgba(0, 0, 0, .22);
+    font-weight: bolder;
+    font-family: 'MyFontMedium';
+    text-align: center;
+}
+
+.number {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #A92727;
+    font-family: 'MyFontBolder';
+    text-align: center;
+}
+
+.day {
+    margin-bottom: -20px;
+    text-align: center;
+
+}
+
+.month {
+    margin-top: -20px;
+    text-align: center;
+}
+
+svg {
+    width: 60px;
+    fill: #A92727;
+}
+
+.blocks {
+    display: grid;
+    align-items: center;
+}
+
+.line {
+    display: flex;
+    padding-left: 0px;
+    font-size: 1.3rem;
+    gap: 60px;
+    position: relative;
+}
+
+.line::before {
+    position: absolute;
+    top: 6px;
+    left: 132px;
+    content: '';
+    height: 12px;
+    width: 12px;
+    background-color: #A92727;
+    border-radius: 50%;
+}
+
+.add {
+    padding: 15px;
+
+    border: #A92727 2px solid;
+    height: max-content;
+    border-radius: 50%;
+    align-self: center;
+    margin-left: 15%;
+    transition: border 0.3s ease;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.add svg {
+    height: 100px;
+    width: auto;
+    transition: fill 0.3s ease;
+
+}
+
+.add:hover {
+    background-color: #A92727;
+    cursor: pointer;
+
+}
+
+.add:hover svg {
+    cursor: pointer;
+    fill: #F1ECDD;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 351px));
+    gap: 9rem;
+    padding: 0 9rem;
+    justify-content: center;
+    margin-top: 40px;
+
+
+}
+
+.projects>div {
+    /*background-color: #a927273a;*/
+    background-color: rgba(255, 255, 255, 0.404);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.project {
+    display: grid;
+    gap: 20px;
+    height: 570px;
+    width: 400px;
+    align-items: self-start;
+    align-content: start;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+.project::-webkit-scrollbar {
+    display: none;
+}
+
+.title {
+    font-size: 40px;
+    font-family: 'MyFontSemiBold';
+}
+
+.item {
+    background-color: rgba(0, 0, 0, 0.062);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    height: 85px;
+    max-height: max-content;
+    position: relative;
+    width: 360px;
+    overflow: hidden;
+}
+
+.left {
+
+    background-color: #6ad854;
+
+    background-color: #d85454;
+    background-color: #5471D8;
+    background-color: #fcb059;
+
+    width: 49px;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.centerButton {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    opacity: 0.4;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.centerButton svg {
+    width: 28px;
+    height: auto;
+
+    visibility: hidden;
+
+}
+
+.centerButton:hover svg {
+    visibility: visible;
+
+}
+
+.item .visibleSvg {
+    visibility: visible;
+}
+
+.right {
+    margin-left: 27px;
+    position: relative;
+    padding-bottom: 12px;
+    width: 293px;
+
+
+}
+
+
+.create {
+    margin-left: 50%;
+    height: 700px;
+    width: 500px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+
+.firster {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+    color: white;
+    align-items: center;
+
+
+
+}
+
+.createtodo {
+    flex-basis: 70%;
+    font-family: 'MyFontBolder';
+    text-align: start;
+    width: 100%;
+    position: relative;
+}
+
+.createtodo::before {
+    content: "Create To Do";
+    font-size: 1.3rem;
+    position: absolute;
+    color: black;
+    top: 50%;
+    left: 100px;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    color: white;
+}
+
+.cancel {
+    cursor: pointer;
+}
+
+.send {
+    font-family: 'MyFontSemiBold';
+    background-color: white;
+    opacity: 0.8;
+    position: relative;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px 0 rgba(26, 24, 29, .12);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    transition: opacity 0.3s ease;
+
+}
+
+.send::before {
+    content: "Create";
+    position: absolute;
+    color: #A92727;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.send:hover {
+    box-shadow: 0px 5px 9px 0 rgba(26, 24, 29, .12);
+    opacity: 0.7;
+}
+
+
+.todo {
+    font-size: 18px;
+    font-family: 'MyFontMedium';
+}
+
+.description {
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.67);
+    max-width: 255px;
+    white-space: nowrap;
+    overflow-wrap: break-word;
+}
+
+.due {
+    position: absolute;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.67);
+    right: 20px;
+    font-family: 'MyFontMedium';
+}
+
+.num {
+    color: #A92727;
+    font-family: 'MyFontBolder';
+}
+
+.click {
+    width: 28px;
+    height: 30px;
+    background-color: white;
+    opacity: 0.6;
+}
+
+.top {
+    background-color: #a92727cb;
+    height: 48%;
+    width: 100%;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.addtitle {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    color: white;
+    font-family: 'MyFontBolder';
+
+}
+
+
+
+.titletext {
+    font-family: 'MyFontMedium';
+    width: 100%;
+    height: 40px;
+    background-color: white;
+    opacity: 0.4;
+    margin-top: 3px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    padding: 7px 13px;
+    line-height: 1.9;
+    font-size: 0.85rem;
+
+
+
+}
+
+
+.titletext::placeholder {
+    color: black;
+}
+
+
+.addDescription {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    color: white;
+    font-family: 'MyFontBolder';
+}
+
+.descriptiontext {
+    font-family: 'MyFontMedium';
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    opacity: 0.4;
+    margin-top: 3px;
+    border-radius: 2px;
+    border: none;
+    outline: none;
+    padding: 7px 13px;
+    line-height: 1.9;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+}
+
+.descriptiontext::placeholder {
+    color: black;
+}
+
+.bottom {
+    font-family: 'MyFontBolder';
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.difficulty {
+    display: flex;
+    flex-direction: column;
+    font-family: 'MyFontSemiBold';
+    gap: 5px;
+    color: rgba(34, 32, 32, 0.897);
+
+}
+
+.duedate {
+    display: flex;
+    flex-direction: column;
+}
+
+.tags {
+    display: flex;
+    flex-direction: column;
+}
+
+option {
+    outline: none;
+}
+
+.front {
+    background-color: white;
+    box-shadow: 0px 2px 3px 0 rgba(26, 24, 29, .12);
+    border-radius: 4px;
+    height: 30px;
+    padding: 2px 15px;
+    position: relative;
+    transition: color 0.3s ease, box-shadow 0.3s ease, outline 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: black;
+    margin-bottom: 20px;
+
+}
+
+.mode {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.front:hover .mode {
+    color: #A92727;
+}
+
+.front:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 3px 2px rgba(26, 24, 29, .12);
+}
+
+.outliner {
+    outline: 1px #A92727 solid;
+}
+
+
+
+.l1 {
+
+    width: 16px;
+    height: auto;
+    transform: translate(0, 10%);
+    margin-right: -5px;
+
+}
+
+.l2 {
+
+    width: 16px;
+    height: auto;
+    transform: translate(0, 10%);
+    margin-right: -5px;
+
+}
+
+.l3 {
+
+    width: 16px;
+    height: auto;
+    transform: translate(0, 10%);
+    margin-right: -5px;
+
+}
+
+.l4 {
+
+    width: 16px;
+    height: auto;
+    transform: translate(0, 10%);
+
+}
+
+.drop {
+    position: absolute;
+    width: 25px;
+    height: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 10px;
+    fill: black;
+}
+
+.dropdown {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: min-content;
+    border-radius: 4px;
+    top: 32px;
+    padding: 7px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0px 2px 3px 0 rgba(26, 24, 29, .12);
+    display: none;
+    z-index: 1;
+
+
+}
+
+.choose {
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.choose::before {
+    transition: background-color 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.choose:hover::before {
+    content: '';
+    position: absolute;
+    background-color: #A92727;
+    opacity: 0.1;
+    top: -7px;
+    bottom: -7px;
+    left: -15px;
+    right: -15px;
+    border-radius: 4px;
+}
+
+.choose:hover {
+    color: #A92727;
+}
+
+
+.choose svg {
+    transition: fill 0.3s ease;
+}
+
+.choose:hover svg {
+    fill: #A92727;
+}
+
+
+
+.r1 {
+    position: absolute;
+    width: 16px;
+    height: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    fill: #878190;
+    right: 0px;
+
+}
+
+.r2 {
+    position: absolute;
+    width: 16px;
+    height: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    fill: #878190;
+    right: 15px;
+}
+
+.r3 {
+    position: absolute;
+    width: 16px;
+    height: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    fill: #878190;
+    right: 30px;
+}
+
+.r4 {
+    position: absolute;
+    width: 16px;
+    height: auto;
+    top: 50%;
+    transform: translate(0, -50%);
+    fill: #878190;
+    right: 45px;
+}
+
+.show {
+    display: flex;
+}
+
+.send2 {
+    margin-top: 200px;
+    justify-content: flex-end;
+}
+
+.duedate {
+    display: flex;
+    flex-direction: column;
+    font-family: 'MyFontSemiBold';
+    gap: 5px;
+    color: rgba(34, 32, 32, 0.897);
+}
+
+.calendar-div {
+    height: 30px;
+    background-color: white;
+    box-shadow: 0px 2px 3px 0 rgba(26, 24, 29, .12);
+    border-radius: 4px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    outline: 1px #b0aabb solid;
+    cursor: pointer;
+    transition: outline 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.calendar-div:hover {
+    outline: 1px #96919e solid;
+    box-shadow: 0px 2px 5px 0 rgba(26, 24, 29, .12);
+}
+
+.enclosure {
+    width: 30px;
+    height: 100%;
+    border-radius: 4px;
+    background-color: #e3dee9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.calendar-div svg {
+    height: 18px;
+    fill: #878190;
+}
+
+.shown {
+    padding-left: 15px;
+    text-align: center;
+}
+
+
+
+
+.wrapper {
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    position: relative;
+}
+
+.wrapper header {
+    display: flex;
+    align-items: center;
+    padding: 25px 30px 10px;
+    justify-content: space-between;
+}
+
+header .icons {
+    display: flex;
+}
+
+header .icons span {
+    height: 38px;
+    width: 38px;
+    margin: 0 1px;
+    cursor: pointer;
+    color: #878787;
+    text-align: center;
+    line-height: 38px;
+    font-size: 1.9rem;
+    user-select: none;
+    border-radius: 50%;
+}
+
+.icons span:last-child {
+    margin-right: -10px;
+}
+
+header .icons span:hover {
+    background: #f2f2f2;
+}
+
+header .current-date {
+    font-size: 1.45rem;
+    font-weight: 500;
+}
+
+.calendar {
+    padding: 20px;
+    padding-bottom: 60px;
+    position: relative;
+
+}
+
+.calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+}
+
+.calendar .days {
+    margin-bottom: 20px;
+}
+
+.calendar li {
+    color: #333;
+    width: calc(100% / 7);
+    font-size: 1.07rem;
+}
+
+.calendar .weeks li {
+    font-weight: 500;
+    cursor: default;
+}
+
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+}
+
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #fff;
+}
+
+.days li::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.days li.active::before {
+    background: #A92727;
+}
+
+.days li:not(.active):hover::before {
+    background: #f2f2f2;
+}
+
+.button {
+    position: absolute;
+    content: "confirm";
+    top: 87%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    height: 35px;
+    width: 80px;
+    background-color: rgba(0, 0, 0, 0.062);
+    text-align: center;
+    line-height: 2.2rem;
+    color: #A92727;
+    font-family: 'MyFontSemiBold';
+    opacity: 0.8;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px 0 rgba(26, 24, 29, .12);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+
+}
+
+.button:hover {
+    box-shadow: 0px 5px 9px 0 rgba(26, 24, 29, .12);
+    opacity: 0.7;
+}
+
+.wrapper {
+    position: absolute;
+    z-index: 1;
+}
+
+.tags {
+    display: flex;
+    flex-direction: column;
+    font-family: 'MyFontSemiBold';
+    gap: 5px;
+    color: rgba(34, 32, 32, 0.897);
+}
+
+.front2 {
+    background-color: white;
+    box-shadow: 0px 2px 3px 0 rgba(26, 24, 29, .12);
+    border-radius: 4px;
+    height: max(min-content, 30px);
+    padding: 2px 15px;
+    position: relative;
+    transition: color 0.3s ease, box-shadow 0.3s ease, outline 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: black;
+    margin-bottom: 20px;
+
+}
+
+.front2:hover .mode {
+    color: #A92727;
+}
+
+.front2:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 3px 2px rgba(26, 24, 29, .12);
+}
+
+.set2 {
+    font-size: 1rem;
+    color: #5e5c5c;
+    height: 25px;
+    margin-top: 5px;
+
+}
+
+.dropdown2 {
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: min-content;
+    border-radius: 4px;
+    top: var(--div-a-height);
+    padding: 7px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0px 2px 3px 0 rgba(26, 24, 29, .12);
+    z-index: 1;
+
+}
+
+.choose2 {
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.choose2::before {
+    transition: background-color 0.3s ease;
+    transition: opacity 0.3s ease;
+}
+
+.choose2:hover::before {
+    content: '';
+    position: absolute;
+    background-color: #A92727;
+    opacity: 0.1;
+    top: -7px;
+    bottom: -7px;
+    left: -15px;
+    right: -15px;
+    border-radius: 4px;
+}
+
+.choose2:hover {
+    color: #A92727;
+}
+
+
+.choose2 svg {
+    transition: fill 0.3s ease;
+}
+
+.choose2:hover svg {
+    fill: #A92727;
+}
+
+.mode2 {
+    display: flex;
+    flex-wrap: wrap;
+    height: minmax(40px, min-content);
+    position: relative;
+}
+
+.inside {
+    background-color: rgba(0, 0, 0, 0.082);
+    padding: 2px 15px;
+    color: rgba(0, 0, 0, 0.678);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    justify-content: space-around;
+    margin: 3px;
+}
+
+.inside svg {
+    width: 13px;
+    height: auto;
+    fill: rgba(0, 0, 0, 0.432);
+    transition: fill 0.3s ease;
+}
+
+.inside:hover svg {
+    fill: #A92727;
+}
+
+
+
+.inside2 img {
+    position: absolute;
+    width: 20px;
+    height: auto;
+    fill: rgba(0, 0, 0, 0.432);
+    transition: fill 0.3s ease;
+    right: -10px;
+}
+
+.inside2:hover img {
+    fill: #A92727;
+}
+
+.inside2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: min-content;
+    padding-right: 10px;
+}
+
+.drop2 {
+    position: absolute;
+    width: 25px;
+    height: auto;
+    top: 3px;
+    right: 10px;
+    fill: black;
+}
+
+
+.hide {
+    display: none;
+}
+
+.tagInput {
+    outline: none;
+    border: rgba(0, 0, 0, 0.308) 1px solid;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    font-family: 'MyFontMedium';
+    color: rgba(0, 0, 0, 0.856);
+}
+
+.tagInput::placeholder {
+    font-family: 'MyFontMedium';
+
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+
+.special {
+    width: 2px;
+    height: auto;
+    fill: rgba(0, 0, 0, 0.432);
+    transition: fill 0.3s ease;
+}
+
+.special:hover {
+    fill: #A92727;
+}
+
+.insideText {
+    margin-right: 10px;
+}
+
+.send2 {
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    transform: translate(0, -50%);
+}
+
+
+.outlinerS::before {
+    position: absolute;
+    content: "";
+    left: -15px;
+    right: -15px;
+    top: -1px;
+    bottom: -2px;
+    outline: 1px #A92727 solid;
+    border-radius: 4px;
+}
+
+
+.all {
+    position: relative;
+}
+
+.colored::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #a9272785;
+    z-index: 1;
+}
+
+.create {
+    position: absolute;
+    top: 20vh;
+    left: -10vw;
+    transform: translate(-10vh, -10vw);
+    transform: scale(0);
+    visibility: hidden;
+    z-index: 2;
+}
+
+.scaled {
+    transform: scale(1);
+    transition: transform 0.5s;
+    visibility: visible;
+}
+
+.picker {
+    outline: 2px solid #A92727;
+}
+
+@media (max-width: 934px) {
+    body {
+        width: min-content;
+    }
+}
+
+.finished {
+    opacity: 0.5;
+    text-decoration: line-through;
+    order: 999;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/*
+.addSvg::before {
+    position: absolute;
+    content: '';
+    top: 3px;
+    bottom: 3px;
+    left: 1px;
+    right: 1px;
+    background: url(./Assets/newSvg.svg);
+    background-repeat: no-repeat;
+    background-size:;
+    z-index: 1;
+}
+*/
+
+.newSvg {
+    visibility: hidden;
+}
+
+.centerButton:hover .newSvg {
+    visibility: visible;
+}
+
+.finished .newSvg {
+    visibility: visible;
+}
+
+.opaque {
+    opacity: 0.5;
+}
